@@ -1,0 +1,28 @@
+<div class="margin">
+  <h1>Stupid Coaching</h1>
+  <div class='devider'>
+    <b>
+      <%= params[:question] %>
+      <div class='name'>
+      - You
+      </div>
+    </b>
+  </div>
+  <div class='devider coach-answer'>
+    <b>
+      <% if params[:question] == 'I am going to work' %>
+      <%= 'Great!' %>
+      <% elsif params[:question][-1] == '?' %>
+      <%= 'Silly question, get dressed and go to work!' %>
+      <% else  %>
+      <%= 'I don\'t care, get dressed and go to work!' %>
+      <% end %>
+      <div class='name'>
+      -  Your coach
+      </div>
+    </b>
+  </div>
+  <div class='footer'>
+  <%= link_to 'Ask a new question', ask_path %>
+  </div>
+</div>
